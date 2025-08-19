@@ -83,3 +83,23 @@ int roll3 = dice.Next(50, 101);
 Console.WriteLine($"First roll: {roll1}");
 Console.WriteLine($"Second roll: {roll2}");
 Console.WriteLine($"Third roll: {roll3}");
+
+//how to install a NuGet package
+dotnet add package <dependency name>
+
+//how to list all packages in a project
+dotnet list package
+
+//lists outdated packages
+dotnet list package --outdated
+
+//conditional logic
+if (total > 14)
+{
+    Console.WriteLine("You win!");
+}
+
+if (total < 15)
+{
+    Console.WriteLine("Sorry, you lose.");
+}
