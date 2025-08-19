@@ -1,7 +1,85 @@
 Console.Write("Hello World");
 Console.WriteLine("Congratulations!");
 
+//char literal
 Console.WriteLine('b');
+//int literal
 Console.WriteLine(123);
+//float literal
 Console.WriteLine(0.25F);
+Console.WriteLine(0.25f);
+//double literal
 Console.WriteLine(2.625);
+//decimal literal
+Console.WriteLine(12.39816M);
+Console.WriteLine(12.39816m);
+
+//declaring variables
+string firstName;
+
+char userOption;
+
+int gameScore;
+
+decimal particlesPerMillion;
+
+bool processedCustomer;
+
+//declare and initialise variables
+string firstName = "Bob";
+
+//implicitly typed local variables - var variables must be initialised
+var lastName = "Smith"; 
+
+//escape character sequences
+Console.WriteLine("Hello\nWorld!");
+Console.WriteLine("Hello\tWorld!");
+//to insert a double-quotation mark in a literal string
+Console.WriteLine("Hello \"World\"!");
+//use the \\ to display a single backslash - ex. filepaths
+Console.WriteLine("c:\\source\\repos");
+
+//verbatim string literals
+Console.WriteLine(@"    c:\source\repos    
+        (this is where your code goes)");
+
+// unicode escape sequences - ex. Kon'nichiwa World
+Console.WriteLine("\u3053\u3093\u306B\u3061\u306F World!");
+
+//string interpolation
+string message = greeting + " " + firstName + "!";
+string message = $"{greeting} {firstName}!";
+
+//combine verbatim literals and string interpolation
+string projectName = "First-Project";
+Console.WriteLine($@"C:\Output\{projectName}\Data");
+
+//basic math operations
+int sum = 7 + 5;
+int difference = 7 - 5;
+int product = 7 * 5;
+int quotient = 7 / 5;
+
+//casting int to decimal
+int first = 7;
+int second = 5;
+decimal quotient = (decimal)first / (decimal)second;
+Console.WriteLine(quotient);
+
+//increment and decrement operators
+int value = 0;     // value is now 0.
+value += 5;        // value is now 5.
+value++;         // value is now 6.
+
+//random number generation
+Random dice = new Random();
+int roll = dice.Next(1, 7);
+Console.WriteLine(roll);
+
+int roll1 = dice.Next();
+int roll2 = dice.Next(101);
+int roll3 = dice.Next(50, 101);
+
+Console.WriteLine($"First roll: {roll1}");
+Console.WriteLine($"Second roll: {roll2}");
+Console.WriteLine($"Third roll: {roll3}");
